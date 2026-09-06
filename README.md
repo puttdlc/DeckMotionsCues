@@ -104,6 +104,9 @@ few questions, shows a summary, and changes nothing until you confirm.
 
 1. Switch the Deck to **Desktop Mode**.
 2. `git clone` this repo to your Steam Deck, anywhere is fine. `Desktop` is recommended.
+   ```bash
+   git clone https://github.com/puttdlc/DeckMotionsCues.git
+   ```
 3. Either **double-click `Install Motion Cues.desktop`** in the folder, or open
    **Konsole** in that folder and run:
 
