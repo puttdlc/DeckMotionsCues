@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Motion Cues
+GenericName=Steam Deck setup wizard
+Comment=Set up the Motion Cues motion-sickness overlay plugin for Decky Loader
+Icon=preferences-desktop-display
+Categories=Utility;Settings;
+Terminal=true
+# %k is the full path of this .desktop file, which is how the wizard finds the
+# plugin files sitting next to it no matter where the folder was copied to.
+Exec=bash -c 'p="%k"; p="${p#file://}"; cd "$(dirname "$p")" || exit 1; exec bash ./install.sh'

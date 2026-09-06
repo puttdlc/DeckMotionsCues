@@ -1,0 +1,11 @@
+{
+  "name": "Motion Cues",
+  "author": "DeckMotionSense",
+  "flags": ["_root"],
+  "api_version": 1,
+  "publish": {
+    "tags": ["accessibility", "overlay", "motion", "gyro", "health"],
+    "description": "Apple-style Vehicle Motion Cues for Steam Deck: subtle dots near the screen edges that move against real device motion to reduce motion sickness in cars, trains and boats. Fully customisable, with presets.",
+    "image": "https://raw.githubusercontent.com/steamdeckhomebrew/decky-loader/main/docs/images/decky-loader.png"
+  }
+}
