@@ -155,14 +155,18 @@ rsync -av --exclude node_modules --exclude .git ./ deck@<deck-ip>:~/homebrew/plu
 ssh deck@<deck-ip> "sudo systemctl restart plugin_loader"
 ```
 
-### Building from source first
+### Modifying the frontend (optional, not needed to install)
 
-Only needed if `dist/` is missing or you changed the frontend. Requires
-Node.js 18+ on your development machine:
+The plugin panel comes pre-built: `dist/index.js` is committed in the repo, so
+`git clone` on the Deck already has everything the installer needs. Nothing
+here needs Node.js or npm on the Deck itself, ever.
+
+Node.js is only relevant if you want to change the panel's source
+(`src/*.tsx`) yourself, on your own PC:
 
 ```bash
 npm install
-npm run build          # bundles src/ -> dist/index.js
+npm run build          # rebuilds dist/index.js from src/
 npm run typecheck
 python -m pytest tests # 122 Python tests
 ```

@@ -226,8 +226,12 @@ check_source() {
     if [ "$missing" -eq 1 ]; then
         say ""
         info "Run this script from inside the Motion Cues folder."
-        info "If 'dist' is missing, the frontend has not been built yet:"
-        info "    npm install && npm run build"
+        if [ ! -e "$SOURCE_DIR/dist" ]; then
+            info "'dist' (the built plugin panel) is missing. It ships pre-built in"
+            info "releases, so this normally only happens if you deleted it, or you"
+            info "cloned the source and skipped the one-time build step:"
+            info "    npm install && npm run build"
+        fi
         die "the source folder is incomplete"
     fi
     local count
